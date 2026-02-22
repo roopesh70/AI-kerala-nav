@@ -10,7 +10,7 @@ function cleanTextForTTS(text) {
 
 function getApiKey() {
     return (
-        process.env.GOOGLE_TTS_API_KEY ||
+        process.env.GEMINI_VOICE_KEY ||
         process.env.GOOGLE_API_KEY ||
         process.env.GCLOUD_API_KEY ||
         ""
@@ -81,7 +81,7 @@ async function synthesizeWithVoice(apiKey, text, voice) {
 export async function synthesizeSpeech(text, language = "en") {
     const apiKey = getApiKey();
     if (!apiKey) {
-        throw new Error("Google TTS API key missing (set GOOGLE_TTS_API_KEY)");
+        throw new Error("Google TTS API key missing (set GEMINI_VOICE_KEY)");
     }
 
     const cleanedText = cleanTextForTTS(text);
