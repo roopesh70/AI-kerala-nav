@@ -26,7 +26,7 @@ export default function Header({ onHistoryToggle, language, onLanguageChange, lo
     return (
         <header className={`header ${scrolled ? 'scrolled' : ''}`}>
             <div className="header-logo">
-                🌿 Kerala AI
+                🌿 Saha AI
             </div>
             <div className="header-actions">
                 <button
