@@ -297,7 +297,7 @@ export default function VoiceInput({ onTranscript, language }) {
             {state === 'idle' && (
                 <button className="voice-pill" onClick={handleClick}>
                     <span className="voice-dot"></span>
-                    {language === 'ml' ? 'മലയാളത്തിലോ ഇംഗ്ലീഷിലോ സംസാരിക്കൂ' : 'Speak in Malayalam or English'}
+                    {language === 'ml' ? 'മലയാളത്തിലോ ഇംഗ്ലീഷിലോ സംസാരിക്കാം' : 'Speak in Malayalam or English'}
                 </button>
             )}
 

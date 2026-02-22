@@ -210,6 +210,17 @@ export default function ServiceResult({ data, onBack, language, userLocation }) 
                 </div>
 
                 <InfoCardsStrip data={data} language={language} />
+
+                {data.onlineApplyUrl && (
+                    <a
+                        href={data.onlineApplyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="apply-online-btn"
+                    >
+                        🌐 {language === 'ml' ? 'ഓൺലൈൻ അപേക്ഷിക്കുക' : 'Apply Online'}
+                    </a>
+                )}
             </div>
 
             <div className="anim-float-up anim-delay-2">

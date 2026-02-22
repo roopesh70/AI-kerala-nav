@@ -35,7 +35,7 @@ export default function HomeScreen({ onSearch, language }) {
         <div className="home-screen">
             <div className="hero-card clay-card anim-float-up">
                 <div className="overline anim-float-up anim-delay-1">
-                    {language === 'ml' ? '🇮🇳 പൗര സേവാ സഹായി' : '🇮🇳 CITIZEN SERVICES'}
+                    {language === 'ml' ? 'പൗരസേവന സഹായി' : 'CITIZEN SERVICES'}
                 </div>
 
                 <h1 className="hero-title anim-float-up anim-delay-1" style={{ marginTop: 12 }}>
@@ -95,10 +95,16 @@ export default function HomeScreen({ onSearch, language }) {
                     ))}
                 </div>
 
-                <p className="muted anim-float-up anim-delay-5" style={{ marginTop: 24, fontSize: 13, lineHeight: 1.6 }}>
+                <p className="muted anim-float-up anim-delay-5" style={{
+                    marginTop: 24,
+                    fontSize: 13,
+                    lineHeight: 1.6,
+                    whiteSpace: 'pre-line'
+                }}
+                >
                     {language === 'ml'
-                        ? '✓ സർക്കാരി പൗരസേവാ കേന്ദ്രങ്ങളിൽ ആ സേവനങ്ങൾ വിവരിക്കുന്നു\n✓ സാധാരണ നാഗരികർക്കായി എളുപ്പ മലയാളം'
-                        : '✓ Real government service info for Kerala\n✓ Available in Malayalam & English for all citizens'}
+                        ? '✓ സർക്കാർ പൗരസേവന കേന്ദ്രങ്ങളിലെ സേവന വിവരങ്ങൾ വിശദീകരിക്കുന്നു.\n ✓ എല്ലാവർക്കും മനസ്സിലാകുന്ന ലളിതമായ മലയാളത്തിൽ.'
+                        : '✓ Real government service info for Kerala\n ✓ Available in Malayalam & English for all citizens'}
                 </p>
             </div>
         </div>

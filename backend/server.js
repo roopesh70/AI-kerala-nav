@@ -253,6 +253,7 @@ app.post("/ai", async (req, res) => {
             akshayaEligible: result.akshayaEligible || false,
             department: result.department || null,
             notes: result.notes || null,
+            onlineApplyUrl: result.onlineApplyUrl || null,
             status: "ok"
         });
     } catch (err) {

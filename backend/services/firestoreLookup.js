@@ -36,6 +36,7 @@ const LOCAL_SERVICES = [
         apply_at: "Akshaya Centre / UIDAI Portal",
         apply_at_ml: "അക്ഷയ കേന്ദ്രം / UIDAI പോർട്ടൽ",
         akshaya_eligible: true,
+        online_apply_url: "https://myaadhaar.uidai.gov.in",
         notes: "You can also update online at myaadhaar.uidai.gov.in using OTP verification",
         notes_ml: "myaadhaar.uidai.gov.in-ൽ OTP ഉപയോഗിച്ച് ഓൺലൈനായും അപ്ഡേറ്റ് ചെയ്യാം"
     },
@@ -60,6 +61,7 @@ const LOCAL_SERVICES = [
         best_visit_time: "Apply online anytime; for centers prefer 10 AM - 12 PM weekdays",
         apply_at: "NSDL / UTIITSL portal or authorized PAN facilitation center",
         akshaya_eligible: true,
+        online_apply_url: "https://www.inditab.com/pan-card-online/india/",
         notes: "Only one PAN per person is allowed. Use correction/reprint if PAN already exists."
     },
     {
@@ -96,6 +98,7 @@ const LOCAL_SERVICES = [
         apply_at: "Village Office / e-District Portal",
         apply_at_ml: "വില്ലേജ് ഓഫീസ് / e-District പോർട്ടൽ",
         akshaya_eligible: true,
+        online_apply_url: "https://edistrict.kerala.gov.in",
         notes: "e-District portal: https://edistrict.kerala.gov.in",
         notes_ml: "e-District പോർട്ടൽ: https://edistrict.kerala.gov.in"
     },
@@ -133,6 +136,7 @@ const LOCAL_SERVICES = [
         apply_at: "Village Office / Taluk Office / e-District Portal",
         apply_at_ml: "വില്ലേജ് ഓഫീസ് / താലൂക്ക് ഓഫീസ് / e-District പോർട്ടൽ",
         akshaya_eligible: true,
+        online_apply_url: "https://edistrict.kerala.gov.in",
         notes: "Outside-state purpose certificates are issued by Taluk Office only",
         notes_ml: "സംസ്ഥാനത്തിന് പുറത്തേക്കുള്ള സർട്ടിഫിക്കറ്റുകൾ താലൂക്ക് ഓഫീസിൽ നിന്ന് മാത്രമേ ലഭിക്കൂ"
     },
@@ -168,8 +172,9 @@ const LOCAL_SERVICES = [
         apply_at: "Village Office",
         apply_at_ml: "വില്ലേജ് ഓഫീസ്",
         akshaya_eligible: false,
-        notes: "Online records: https://erekha.kerala.gov.in",
-        notes_ml: "ഓൺലൈൻ രേഖകൾ: https://erekha.kerala.gov.in"
+        online_apply_url: "https://dslr.kerala.gov.in/en/standard-operating-procedure/",
+        notes: "Online records: https://dslr.kerala.gov.in/en/erekha/",
+        notes_ml: "ഓൺലൈൻ രേഖകൾ: https://dslr.kerala.gov.in/en/erekha/"
     },
     {
         id: "birth_certificate",
@@ -273,6 +278,7 @@ const LOCAL_SERVICES = [
         apply_at: "Panchayat / Municipality / Sevana Portal",
         apply_at_ml: "പഞ്ചായത്ത് / മുനിസിപ്പാലിറ്റി / സേവന പോർട്ടൽ",
         akshaya_eligible: true,
+        online_apply_url: "https://welfarepension.lsgkerala.gov.in",
         notes: "Sevana portal: https://welfarepension.lsgkerala.gov.in",
         notes_ml: "സേവന പോർട്ടൽ: https://welfarepension.lsgkerala.gov.in"
     },
@@ -308,6 +314,7 @@ const LOCAL_SERVICES = [
         apply_at: "Taluk Supply Office / Civil Supplies",
         apply_at_ml: "താലൂക്ക് സപ്ലൈ ഓഫീസ് / സിവിൽ സപ്ലൈസ്",
         akshaya_eligible: true,
+        online_apply_url: "https://civilsupplieskerala.gov.in",
         notes: "Online application possible via civilsupplieskerala.gov.in",
         notes_ml: "civilsupplieskerala.gov.in വഴി ഓൺലൈൻ അപേക്ഷ സാധ്യമാണ്"
     },
@@ -345,6 +352,7 @@ const LOCAL_SERVICES = [
         apply_at: "e-Grantz Portal (egrantz.kerala.gov.in)",
         apply_at_ml: "e-Grantz പോർട്ടൽ (egrantz.kerala.gov.in)",
         akshaya_eligible: true,
+        online_apply_url: "https://egrantz.kerala.gov.in",
         notes: "Multiple scholarships available for SC/ST/OBC/Minority/General economically weak students",
         notes_ml: "SC/ST/OBC/ന്യൂനപക്ഷ/സാമ്പത്തികമായി ദുർബലരായ വിദ്യാർത്ഥികൾക്ക് നിരവധി സ്കോളർഷിപ്പുകൾ ലഭ്യമാണ്"
     },
@@ -380,6 +388,7 @@ const LOCAL_SERVICES = [
         apply_at: "Parivahan Portal / RTO Office",
         apply_at_ml: "പരിവാഹൻ പോർട്ടൽ / RTO ഓഫീസ്",
         akshaya_eligible: false,
+        online_apply_url: "https://parivahan.gov.in/parivahan",
         notes: "Online: parivahan.gov.in/parivahan",
         notes_ml: "ഓൺലൈൻ: parivahan.gov.in/parivahan"
     }

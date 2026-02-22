@@ -1,13 +1,30 @@
 import { geminiPrimary, geminiSecondary } from "./geminiService.js";
 import { huggingFace } from "./huggingfaceService.js";
 import { localAI } from "./localRouter.js";
-import { findService, formatService } from "./firestoreLookup.js";
+import { findService, formatService, LOCAL_SERVICES } from "./firestoreLookup.js";
 import { detectLifeEvent } from "./lifeEvents.js";
 
 // Auto-detect Malayalam script in the input
 function detectMalayalamInput(message = "") {
     const malayalamChars = (message.match(/[\u0D00-\u0D7F]/g) || []).length;
     return malayalamChars >= 2;
+}
+
+// Lookup map for online_apply_url from local fallback data (by id AND service name)
+const LOCAL_SERVICE_URL_MAP = {};
+for (const s of LOCAL_SERVICES) {
+    if (s.online_apply_url) {
+        if (s.id) LOCAL_SERVICE_URL_MAP[s.id.toLowerCase()] = s.online_apply_url;
+        if (s.service) LOCAL_SERVICE_URL_MAP[s.service.toLowerCase()] = s.online_apply_url;
+    }
+}
+
+function getOnlineApplyUrl(service) {
+    if (service.online_apply_url) return service.online_apply_url;
+    const byId = service.id ? LOCAL_SERVICE_URL_MAP[service.id.toLowerCase()] : null;
+    if (byId) return byId;
+    const byName = service.service ? LOCAL_SERVICE_URL_MAP[service.service.toLowerCase()] : null;
+    return byName || null;
 }
 
 function normalizeCitizenText(message = "") {
@@ -166,6 +183,7 @@ export async function getAIResponse(message, options = {}) {
             akshayaEligible: service.akshaya_eligible || false,
             department: service.department || null,
             notes: language === "ml" && service.notes_ml ? service.notes_ml : (service.notes || null),
+            onlineApplyUrl: getOnlineApplyUrl(service),
         };
     }
 

@@ -365,6 +365,47 @@ h2 {
   color: var(--muted);
 }
 
+/* ── Apply Online Button ── */
+.apply-online-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 13px 28px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(135deg, hsl(145, 63%, 42%), hsl(152, 56%, 38%));
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: 3px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 6px 22px rgba(40, 167, 90, 0.28),
+    inset 0 2px 4px rgba(255, 255, 255, 0.30);
+  cursor: pointer;
+  transition: transform 0.18s var(--spring), box-shadow 0.18s ease, background 0.2s ease;
+  min-height: 48px;
+  width: 100%;
+}
+
+.apply-online-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  background: linear-gradient(135deg, hsl(145, 63%, 36%), hsl(152, 56%, 32%));
+  box-shadow:
+    0 10px 30px rgba(40, 167, 90, 0.34),
+    inset 0 2px 4px rgba(255, 255, 255, 0.30);
+}
+
+.apply-online-btn:active {
+  transform: scale(0.97);
+  box-shadow:
+    0 3px 12px rgba(40, 167, 90, 0.22),
+    inset 0 2px 4px rgba(255, 255, 255, 0.30);
+}
+
 /* ── Quick Chips ── */
 .chip {
   display: inline-flex;
